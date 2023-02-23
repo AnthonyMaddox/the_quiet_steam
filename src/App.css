@@ -1,49 +1,34 @@
-/* .main {
-    min-height: 70cm;
-    margin: auto;
-    background: url("./Images/bg2.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  } */
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
 section{
     height:100vh;
     width: 100%;
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
-   background-attachment: fixed;
+    background-attachment: fixed;
 }
 .image-1 {
-  background-image: url("./Images/image-1.JPG")
+    background-image: url("./Images/image-1.JPG")
 }
 
 .image-2 {
-  background-image: url("./Images/image-2.JPG");
+    background-image: url("./Images/image-2.JPG");
 }
 .image-3 {
-  background-image: url("./Images/image-3.JPG");
+    background-image: url("./Images/image-3.JPG");
 }
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: 'Zeyada', cursive;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
   }
   
   .App {
     text-align: center;
   }
-  
-  
   
   .App-container {
     min-height: 100vh;
@@ -51,8 +36,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + .7vmin);
+    font-size: calc(15px + .7vmin);
     color: white;
+    opacity: 0.7;
   }
   
   .limited{
@@ -61,12 +47,26 @@ body {
   .fixed-header {
     float: right;
     width: 200px;
-    padding: 25px;
+    padding: 27px;
   }
   .inner-header {
-    font-family: fantasy;
-    color:aliceblue;
-    font-size: 22px;
+    opacity: 0.9;
+    font-family: 'Zeyada', cursive;
+    font-size: 32px;
+    color: transparent;
+    background: #8f8f8f;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  }
+  .inner-header-2 {
+    font-size: 16px;
+    float:right;
+    padding-right: 18px;
+    opacity: 1;
+    color:#8f8f8f;
+    text-shadow: none;
   }
 
 
