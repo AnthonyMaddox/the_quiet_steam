@@ -17,6 +17,11 @@ section{
 }
 .image-3 {
     background-image: url("./Images/image-3.JPG");
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -26,11 +31,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .App {
+.App {
     text-align: center;
   }
   
-  .App-container {
+.App-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -40,35 +45,71 @@ body {
     color: white;
     opacity: 0.7;
   }
+iframe {
+    -webkit-box-shadow: -10px 0px 13px -7px aliceblue, 10px 0px 13px -7px aliceblue, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: -10px 0px 13px -7px aliceblue, 10px 0px 13px -7px aliceblue, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
   
-  .limited{
+.limited{
     max-width: 74%;
   }
-  .fixed-header {
+.fixed-header {
     float: right;
     width: 200px;
-    padding: 27px;
+    padding: 30px;
   }
-  .inner-header {
+.inner-header {
+    z-index: 2;
     opacity: 0.9;
     font-family: 'Zeyada', cursive;
     font-size: 32px;
     color: transparent;
-    background: #8f8f8f;
+    background: #8d99abf8;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
   }
-  .inner-header-2 {
+.inner-header-2 {
     font-size: 16px;
     float:right;
     padding-right: 18px;
     opacity: 1;
-    color:#8f8f8f;
+    color:#8d99abf8;
     text-shadow: none;
   }
-
+.tracks {
+    color:rgb(55, 54, 34);
+    width: 640px; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    position:relative;
+    font-size: 30px;
+  }
+li {
+    text-align: center;
+    list-style-type: none;
+  }
+.introText-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+.introText {
+    /* font-size: 34px !important; */
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    text-align: center;
+    width: 35%;
+    margin-top: 0%;
+    margin-right: 22%;
+    position: sticky;
+}
 
  /*  .main::after {
     content: "";

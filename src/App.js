@@ -1,27 +1,51 @@
 import "./App.css";
-import React from "react";
+import { default as React, Component } from "react";
 // import ReactPlayer from "react-player";
 import Player from "./Player.js";
 import ScrollButton from "./ScrollButton.js";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { TypeAnimation } from "react-type-animation";
+
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link,
+//   useRouteMatch,
+//   useParams,
+// } from "react-router-dom";
+// const fadeDuration = 10;
 
 function App() {
   return (
     <div>
-      {/* <div className="main">The Quiet Steam</div> */}
       <section className="image-1">
         <div className="fixed-header">
           <div className="inner-header">
             The Quiet Steam<br></br>
             <span className="inner-header-2">By Anthony Maddox</span>
           </div>
+        </div>
+        <div className="introText-container">
+          <TypeAnimation
+            className="introText"
+            // Same String at the start will only be typed once, initially
+            sequence={[
+              "",
+              2000,
+              "For all those on their way to the fishing grounds...",
+              3000,
+              "",
+              1000,
+              "may you have a quiet steam",
+              10000,
+              "",
+            ]}
+            speed={30} // Custom Speed from 1-99 - Default Speed: 40
+            style={{ fontSize: "1.2em" }}
+            wrapper="span" // Animation will be rendered as a <span>
+            cursor={false}
+            deletionSpeed={95}
+          />
         </div>
       </section>
       <section className="image-2">
@@ -30,7 +54,18 @@ function App() {
           <ReactPlayer url="https://soundcloud.com/anthony-j-maddox/sets/its-about-freedom"/>
         </div> */}
       </section>
-      <section className="image-3"></section>
+      <section className="image-3">
+        <ul className="tracks">
+          <li>Last Haul</li>
+          <li>Rain For Morning</li>
+          <li>Isolation</li>
+          <li>Deep Creek Shandy</li>
+          <li>It's About Freedom</li>
+          <li>The Best Days of Our Time</li>
+          <li>Snorkeling Above Submarines</li>
+          <li>Sea Ice</li>
+        </ul>
+      </section>
       <ScrollButton />
     </div>
   );
