@@ -1,5 +1,5 @@
 import "./App.css";
-import { default as React, Component } from "react";
+import React from "react";
 import Player from "./Player.js";
 import ScrollButton from "./ScrollButton.js";
 import { TypeAnimation } from "react-type-animation";
