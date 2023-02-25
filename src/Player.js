@@ -1,9 +1,9 @@
-import React, { useState, useEffect, createRef } from "react";
+import React, {  createRef } from "react";
 import "./App.css";
 
-import loadscript from "load-script";
+// import loadscript from "load-script";
 
-// SoundCloud widget API
+// SoundCloud widget API useState, useEffect,
 //  https://developers.soundcloud.com/docs/api/html5-widget
 
 function Player() {
