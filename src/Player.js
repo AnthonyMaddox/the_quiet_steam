@@ -84,19 +84,19 @@ function Player() {
     setIsPlaying(!isPlaying);
   };
 
-  const changePlaylistIndex = (skipForward = true) => {
-    // get list of songs from SC widget
-    player.getSounds((playerSongList) => {
-      let nextIndex = skipForward ? playlistIndex + 1 : playlistIndex - 1;
+//   const changePlaylistIndex = (skipForward = true) => {
+//     // get list of songs from SC widget
+//     player.getSounds((playerSongList) => {
+//       let nextIndex = skipForward ? playlistIndex + 1 : playlistIndex - 1;
 
-      // ensure index is not set to less than 0 or greater than playlist
-      if (nextIndex < 0) nextIndex = 0;
-      else if (nextIndex >= playerSongList.length)
-        nextIndex = playerSongList.length - 1;
+//       // ensure index is not set to less than 0 or greater than playlist
+//       if (nextIndex < 0) nextIndex = 0;
+//       else if (nextIndex >= playerSongList.length)
+//         nextIndex = playerSongList.length - 1;
 
-      setPlaylistIndex(nextIndex);
-    });
-  };
+//       setPlaylistIndex(nextIndex);
+//     });
+//   };
 
   return (
     <div className="App">
