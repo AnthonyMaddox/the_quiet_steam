@@ -1,18 +1,7 @@
 import "./App.css";
 import React from "react";
 import Player from "./Player.js";
-import ScrollButton from "./ScrollButton.js";
-import { TypeAnimation } from "react-type-animation";
-
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link,
-//   useRouteMatch,
-//   useParams,
-// } from "react-router-dom";
-// const fadeDuration = 10;
+// import { TypeAnimation } from "react-type-animation";
 
 function App() {
   return (
@@ -25,7 +14,7 @@ function App() {
           </div>
         </div>
         <div className="introText-container">
-          <TypeAnimation
+          {/* <TypeAnimation
             className="introText"
             sequence={[
               "",
@@ -43,7 +32,7 @@ function App() {
             wrapper="span"
             cursor={false}
             deletionSpeed={100}
-          />
+          /> */}
         </div>
       </section>
       <section className="image-2">
@@ -61,7 +50,6 @@ function App() {
           <li>Sea Ice</li>
         </ul>
       </section>
-      <ScrollButton />
     </div>
   );
 }
