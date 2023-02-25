@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: 'Zeyada', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   }
 section{
     height:100vh;
     width: 100%;
@@ -9,7 +19,7 @@ section{
     background-attachment: fixed;
 }
 .image-1 {
-    background-image: url("./Images/image-1.JPG")
+    background-image: url("./Images/image-1.JPG");
 }
 
 .image-2 {
@@ -23,16 +33,10 @@ section{
     justify-content: center;
     align-items: center;
 }
-
-body {
-    margin: 0;
-    font-family: 'Zeyada', cursive;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
   
 .App {
     text-align: center;
+    
   }
   
 .App-container {
@@ -50,16 +54,15 @@ iframe {
     box-shadow: -10px 0px 13px -7px aliceblue, 10px 0px 13px -7px aliceblue, 5px 5px 15px 5px rgba(0,0,0,0);
   }
   
-.limited{
+/* .limited{
     max-width: 74%;
-  }
+  } */
 .fixed-header {
     float: right;
     width: 200px;
-    padding: 30px;
+    margin: 30px;
   }
 .inner-header {
-    z-index: 2;
     opacity: 0.9;
     font-family: 'Zeyada', cursive;
     font-size: 32px;
@@ -73,7 +76,7 @@ iframe {
 .inner-header-2 {
     font-size: 16px;
     float:right;
-    padding-right: 18px;
+    margin-right: 18px;
     opacity: 1;
     color:#8d99abf8;
     text-shadow: none;
@@ -84,15 +87,15 @@ iframe {
     height: auto;
     margin: 0 auto;
     position:relative;
-    font-size: 30px;
+    font-size: 22px;
   }
 li {
     text-align: center;
     list-style-type: none;
   }
 .introText-container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: transparent;
     display:flex;
     align-items: center;
@@ -110,20 +113,26 @@ li {
     margin-right: 22%;
     position: sticky;
 }
+@media (max-width: 450px) and (max-height: 860px) {
+    .fixed-header {
+        width: 160px;
+        padding: 20px;
+      }
+    .inner-header {
+        font-size: 25px;
+        color: transparent;
+        background: #8d99abf8;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+      }
+    .inner-header-2 {
+        font-size: 14px;
+        margin-right: 10px;
+      }
+  }
 
- /*  .main::after {
-    content: "";
-    background: url("./Images/bg2.jpg");
-    opacity: 1;
-    top: 70px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    background-position: center;
-    background-size: cover;
-    background-attachment: scroll;
-  } */
+ 
 
 

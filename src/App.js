@@ -1,6 +1,5 @@
 import "./App.css";
 import { default as React, Component } from "react";
-// import ReactPlayer from "react-player";
 import Player from "./Player.js";
 import ScrollButton from "./ScrollButton.js";
 import { TypeAnimation } from "react-type-animation";
@@ -28,31 +27,27 @@ function App() {
         <div className="introText-container">
           <TypeAnimation
             className="introText"
-            // Same String at the start will only be typed once, initially
             sequence={[
               "",
               2000,
-              "For all those on their way to the fishing grounds...",
+              "To everyone on their way at sea...",
               3000,
               "",
               1000,
-              "may you have a quiet steam",
+              "may you have a quiet steam.",
               10000,
               "",
             ]}
-            speed={30} // Custom Speed from 1-99 - Default Speed: 40
+            speed={30}
             style={{ fontSize: "1.2em" }}
-            wrapper="span" // Animation will be rendered as a <span>
+            wrapper="span"
             cursor={false}
-            deletionSpeed={95}
+            deletionSpeed={100}
           />
         </div>
       </section>
       <section className="image-2">
         <Player />
-        {/* <div>
-          <ReactPlayer url="https://soundcloud.com/anthony-j-maddox/sets/its-about-freedom"/>
-        </div> */}
       </section>
       <section className="image-3">
         <ul className="tracks">
