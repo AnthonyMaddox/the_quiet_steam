@@ -29,7 +29,7 @@ function Player() {
       const player = window.SC.Widget(iframeRef.current);
       setPlayer(player);
 
-      const { PLAY, PLAY_PROGRESS, PAUSE, FINISH, ERROR } =
+      const { PLAY, PAUSE, } =
         window.SC.Widget.Events;
 
       // NOTE: closures created - cannot access react state or props from within and SC callback functions!!
@@ -56,33 +56,33 @@ function Player() {
   // integration - update SC player based on new state (e.g. play button in React section was click)
 
   // adjust playback in SC player to match isPlaying state
-  useEffect(() => {
-    if (!player) return; // player loaded async - make sure available
+//   useEffect(() => {
+//     if (!player) return; // player loaded async - make sure available
 
-    player.isPaused((playerIsPaused) => {
-      if (isPlaying && playerIsPaused) {
-        player.play();
-      } else if (!isPlaying && !playerIsPaused) {
-        player.pause();
-      }
-    });
-  }, [isPlaying]);
+//     player.isPaused((playerIsPaused) => {
+//       if (isPlaying && playerIsPaused) {
+//         player.play();
+//       } else if (!isPlaying && !playerIsPaused) {
+//         player.pause();
+//       }
+//     });
+//   }, [isPlaying]);
 
-  // adjust seleted song in SC player playlist if playlistIndex state has changed
-  useEffect(() => {
-    if (!player) return; // player loaded async - make sure available
+//   // adjust seleted song in SC player playlist if playlistIndex state has changed
+//   useEffect(() => {
+//     if (!player) return; // player loaded async - make sure available
 
-    player.getCurrentSoundIndex((playerPlaylistIndex) => {
-      if (playerPlaylistIndex !== playlistIndex) player.skip(playlistIndex);
-    });
-  }, [playlistIndex]);
+//     player.getCurrentSoundIndex((playerPlaylistIndex) => {
+//       if (playerPlaylistIndex !== playlistIndex) player.skip(playlistIndex);
+//     });
+//   }, [playlistIndex]);
 
   // React section button click event handlers (play/next/previous)
   //  - adjust React component state based on click events
 
-  const togglePlayback = () => {
-    setIsPlaying(!isPlaying);
-  };
+//   const togglePlayback = () => {
+//     setIsPlaying(!isPlaying);
+//   };
 
 //   const changePlaylistIndex = (skipForward = true) => {
 //     // get list of songs from SC widget
